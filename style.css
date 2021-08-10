@@ -11,8 +11,32 @@
   src: url('fonts/HelveticaNeue-Regular.woff') format('woff');
 }
 
-::-webkit-scrollbar {
-    display: none;
+@media (min-width:900px) {
+  /* Desktop only */
+
+  ::-webkit-scrollbar {
+    width: 1em;
+    position: fixed;
+    z-index: -1;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: black;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color:white;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: 0 50% !important;
+    min-width: 99%;
+    min-height: 30%;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    
+  }
 }
 
 html {
@@ -27,6 +51,11 @@ body {
   background-color: #fff;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+}
+
+body.open{
+  overflow-y: hidden;
 }
 
 a {
@@ -133,19 +162,18 @@ header {
 
 .menu {
   position: fixed;
-  top: 0;
+  top: 100vh;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgb(200, 255, 0);
   z-index: 3;
   padding: 10px 15px 15px 15px;
-  transform: translateY(100%);
-  transition: transform 0.35s ease;
+  transition: top 0.35s ease;
 }
 
 .open {
-  transform: translateY(0%);
+  top: 0;
 }
 
 .first-row {

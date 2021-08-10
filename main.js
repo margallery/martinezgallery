@@ -1,6 +1,7 @@
 $('.menu-toggle').on('click', function() {
 
 	$('.menu').toggleClass('open')
+    $('body').toggleClass('open')
 
   return false
 
