@@ -415,6 +415,11 @@ footer ul {
   padding: 0px 15px 15px 15px;
 }
 
+.text-image-replace {
+  width: 99%;
+  padding: 0px 15px 15px 15px;
+}
+
 .text p {
   margin: 0 0 10px 0;
   padding: 0 0 10px 0;
@@ -884,6 +889,10 @@ footer ul {
     width: calc(100vw - 30px);
     padding: 0 15px 15px 15px;
     margin: 0;
+  }
+
+  .text-image-replace {
+    width:95%;
   }
 
   .text p {
